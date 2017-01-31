@@ -22,7 +22,7 @@ public class Tire extends AutoPart{
 		return recommendedPsi;
 	}
 	
-	public boolean HandlesSnowWell(){
+	public boolean handlesSnowWell(){
 		return handlesSnowWell;
 	}
 }
