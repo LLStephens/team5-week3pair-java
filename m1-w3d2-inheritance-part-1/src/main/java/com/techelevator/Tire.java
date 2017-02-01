@@ -1,35 +1,28 @@
 package com.techelevator;
 
-public class Tire extends AutoPart {
-
-	//Start with list of stuff - they're your member variables
-	//Decide their types
+public class Tire extends AutoPart{
 	private int speedRating;
-	private int recommendedPSI;
+	private int recommendedPsi;
 	private boolean handlesSnowWell;
+
 	
-	public Tire(int SpeedRating, int recommendedPSI, boolean handlesSnowWell, String partNumber, String name, String manufacturer, float weight, float price) {
+	public Tire(int speedRating, int recommendedPsi, boolean handlesSnowWell, String partNumber, String name, String manufacturer, float weight, float price) {
 		super(partNumber, name, manufacturer, weight, price);
 		
-		this.speedRating = speedRating;
-		this.recommendedPSI = recommendedPSI;
 		this.handlesSnowWell = handlesSnowWell;
-
+		this.recommendedPsi = recommendedPsi;
+		this.speedRating = speedRating;
 	}
-	
-	public int getSpeedRating() {
+	//only creating getters (not setters) bc these variables aren't going to change
+	public int getSpeedRating(){
 		return speedRating;
 	}
 	
-	public getRecommendedPSI() {
-		return recommendedPSI;
+	public int getRecommendedPsi(){
+		return recommendedPsi;
 	}
 	
-	public getHandlesSnowWell() {
-		return handlesSnowWell;  //tip for boolean values- want it to read like a sentence. So it fits well in an if. "if tire.handlesSnowWell then do something"
+	public boolean HandlesSnowWell(){
+		return handlesSnowWell;
 	}
-	
-	public 
 }
-
-
