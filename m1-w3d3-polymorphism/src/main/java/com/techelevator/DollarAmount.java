@@ -70,4 +70,12 @@ public class DollarAmount {
     	return totalAmountInCents;
     }
     
+    @Override
+    public String toString() {
+    	//String money = concat(getDollars() + getCents());
+    	//return String.format("$%d.%02d", money);
+//    	return String.format("$%d.%02d", getDollars(), getCents());
+    	return String.format("$%d.%02d", getDollars(), Math.abs(getCents()));
+    }
+    
 }

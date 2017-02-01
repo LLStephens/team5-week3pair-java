@@ -40,4 +40,3 @@ public class AutoPart {
 		return price;
 	}
 }
-
