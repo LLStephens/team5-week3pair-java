@@ -32,7 +32,7 @@ public class AutoPart {
 		return weight;
 	}
 	//price gets a getter and setter bc it will likely change
-	public void setPrice(){
+	public void setPrice(float price){
 		this.price = price;
 	}
 	
