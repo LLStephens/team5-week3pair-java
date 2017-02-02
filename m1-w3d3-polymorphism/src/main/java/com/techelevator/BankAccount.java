@@ -1,18 +1,19 @@
 package com.techelevator;
 
 public class BankAccount {
-	private String accountHolderName;
+	protected BankCustomer customer;
 	private String accountNumber;
 	protected DollarAmount balance;
 
-	public BankAccount(String accountHolderName, String accountNumber) {
-		this.accountHolderName = accountHolderName;
+
+	public BankAccount(BankCustomer customer, String accountNumber) {
+		this.customer = customer;
 		this.accountNumber = accountNumber;
 		this.balance = DollarAmount.ZERO_DOLLARS;
 	}
 
-	public String getAccountHolderName() {
-		return accountHolderName;
+	public BankCustomer getAccountHolder() {
+		return customer;
 	}
 	
 	public String getAccountNumber() {

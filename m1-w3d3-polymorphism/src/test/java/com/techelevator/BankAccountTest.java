@@ -12,12 +12,16 @@ public class BankAccountTest {
 
 	public void test_new_bank_account_constructor() {
 		//Arrange
-		BankAccount countess = new BankAccount("Her Majesty", "666");
+		BankCustomer customer = new BankCustomer("Joe Filly", "123 Main St");
+		BankAccount account = new BankAccount(customer, "666");
 		
 		//Assert
-		Assert.assertEquals("Expected Her Majesty", "Her Majesty", countess.getAccountHolderName());
-		Assert.assertEquals("Expected 666",  "666", countess.getAccountNumber());
-		Assert.assertEquals("Expected $0.00", "$0.00", countess.getBalance().toString());
+		Assert.assertEquals("Expected 123 Main St", "123 Main St", customer.getAddress());
+		Assert.assertEquals("Expected Joe Filly", "Joe Filly", customer.getName());
+		Assert.assertEquals("Expected 666",  "666", account.getAccountNumber());
+		
+		
+		Assert.assertEquals("Expected $0.00", "$0.00", account.getBalance().toString());
 	
 	}
 

@@ -43,7 +43,7 @@ public class DollarAmount {
     }
     
     public DollarAmount plus(DollarAmount amountToAdd) {
-        return new DollarAmount(this.totalAmountInCents + amountToAdd.totalAmountInCents);
+        return new DollarAmount(this.totalAmountInCents + amountToAdd.totalAmountInCents);  //will not change value of instance, will create new instance and return that value
     }
 
     public int compareTo(DollarAmount amountToCompare) {
@@ -68,14 +68,6 @@ public class DollarAmount {
     @Override
     public int hashCode() {
     	return totalAmountInCents;
-    }
-    
-    @Override
-    public String toString() {
-    	//String money = concat(getDollars() + getCents());
-    	//return String.format("$%d.%02d", money);
-//    	return String.format("$%d.%02d", getDollars(), getCents());
-    	return String.format("$%d.%02d", getDollars(), Math.abs(getCents()));
     }
     
 }

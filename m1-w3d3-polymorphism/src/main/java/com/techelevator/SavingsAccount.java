@@ -2,8 +2,8 @@ package com.techelevator;
 
 public class SavingsAccount extends BankAccount{
 
-	public SavingsAccount(String accountHolderName, String accountNumber) {
-		super(accountHolderName, accountNumber);
+	public SavingsAccount(BankCustomer customer, String accountNumber) {
+		super(customer, accountNumber);
 	
 	}
 	

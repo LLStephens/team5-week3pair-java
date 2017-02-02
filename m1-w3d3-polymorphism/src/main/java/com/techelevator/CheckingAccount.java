@@ -2,11 +2,11 @@ package com.techelevator;
 
 public class CheckingAccount  extends BankAccount{
 
-	public CheckingAccount(String accountHolderName, String accountNumber) {
-		super(accountHolderName, accountNumber);
+	public CheckingAccount(BankCustomer customer, String accountNumber) {
+		super(customer, accountNumber);
 	}
 	 
-	
+
 	
 	@Override
 	public DollarAmount withdraw(DollarAmount amountToWithdraw) {
