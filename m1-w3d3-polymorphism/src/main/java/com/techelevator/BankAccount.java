@@ -8,6 +8,7 @@ public class BankAccount {
 
 	public BankAccount(BankCustomer customer, String accountNumber) {
 		this.customer = customer;
+		customer.addAcct(this);
 		this.accountNumber = accountNumber;
 		this.balance = DollarAmount.ZERO_DOLLARS;
 	}
@@ -39,5 +40,8 @@ public class BankAccount {
 		destinationAccount.deposit(transferAmount);
 
 	}
+	
+	
+	
 
 }

@@ -6,17 +6,20 @@ import org.junit.Before;
 
 public class CheckingAccountTest {
 	
+	private BankCustomer customer;
 	private CheckingAccount checkers;
 	
 	@Before
 	public void setup(){
-		checkers= new CheckingAccount("Fancy Lady", "321");
+		customer= new BankCustomer("Julie Simmons", "987 Smart Rd");
+		checkers= new CheckingAccount(customer, "321");
 	}
 	
 	@Test
 	public void intializes_correctly(){
 		
-		Assert.assertEquals("Fancy Lady", checkers.getAccountHolderName());
+		Assert.assertEquals("Julie Simmons", customer.getName());
+		Assert.assertEquals("987 Smart Rd", customer.getAddress());
 		Assert.assertEquals("321", checkers.getAccountNumber());
 		Assert.assertEquals("Expected $0.00", "$0.00", checkers.getBalance().toString());
 	}

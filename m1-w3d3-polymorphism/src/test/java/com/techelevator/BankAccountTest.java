@@ -19,8 +19,6 @@ public class BankAccountTest {
 		Assert.assertEquals("Expected 123 Main St", "123 Main St", customer.getAddress());
 		Assert.assertEquals("Expected Joe Filly", "Joe Filly", customer.getName());
 		Assert.assertEquals("Expected 666",  "666", account.getAccountNumber());
-		
-		
 		Assert.assertEquals("Expected $0.00", "$0.00", account.getBalance().toString());
 	
 	}
